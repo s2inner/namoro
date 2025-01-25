@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa História</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #FFF5F8; /* Fundo rosado delicado */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #5A005A; /* Roxo profundo para elegância */
+      overflow: auto; /* Permite a rolagem */
+    }
+    header {
+      background: linear-gradient(90deg, #E6E6FA, #D8BFD8); /* Gradiente lavanda e lilás pastel */
+      color: #5A005A;
+      padding: 40px;
+      font-size: 32px;
+      font-weight: bold;
+      border-bottom: 4px solid #FFD1DC; /* Rosa suave para destacar */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    section {
+      padding: 30px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 30px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+    }
+    .message {
+      font-size: 22px;
+      margin: 25px auto;
+      background-color: #FFE4E1; /* Fundo rosa claro */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    footer {
+      background: linear-gradient(90deg, #D8BFD8, #E6E6FA); /* Gradiente lilás pastel e lavanda */
+      color: #5A005A;
+      padding: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-top: 4px solid #FFD1DC;
+      box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
+    }
+    /* Flocos de neve */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 1.2em;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+    /* Símbolos musicais */
+    .musical-note {
+      position: fixed;
+      top: -10px;
+      color: #FFD700; /* Dourado */
+      font-size: 1.2em;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Nosso Namoro de Verão ❤️
+  </header>
+  <section>
+    <p class="message">Cada momento com você é especial:</p>
+    <div class="photo-grid">
+      <a href="https://www.youtube.com/watch?v=YSUCAYn3FFs" target="_blank">
+        <img src="https://i.imgur.com/EnkkTqh.jpg" alt="Foto 1">
+      </a>
+      <a href="https://www.youtube.com/watch?v=8fWN86PerzI" target="_blank">
+        <img src="https://i.imgur.com/Wm9DhxF.jpg" alt="Foto 2">
+      </a>
+      <a href="https://www.youtube.com/watch?v=GkE8aQR7qRI" target="_blank">
+        <img src="https://imgur.com/AiKznPe.jpg" alt="Foto 3">
+      </a>
+      <a href="https://www.youtube.com/watch?v=BueVGiyx_E4" target="_blank">
+        <img src="https://i.imgur.com/UWSuDMt.jpg" alt="Foto 4">
+      </a>
+      <a href="https://www.youtube.com/watch?v=fhk1Xpnhc5A" target="_blank">
+        <img src="https://i.imgur.com/o2i8unh.jpg" alt="Foto 5">
+      </a>
+      <a href="https://youtu.be/8fWN86PerzI" target="_blank">
+        <img src="https://imgur.com/1vLNWRS.jpg" alt="Nova Foto">
+      </a>
+    </div>
+    <p class="message">Minha preferida,. querida por completa;- uma lua de mel. Te amo! 🥰</p>
+  </section>
+  <footer>
+    Feito com amor para você ❤️ 
+  </footer>
+
+  <!-- Efeito de neve e símbolos musicais -->
+  <script>
+    const snowflakeCount = 50;
+    const musicalNoteCount = 20;
+
+    for (let i = 0; i < snowflakeCount; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.className = 'snowflake';
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+      document.body.appendChild(snowflake);
+    }
+
+    for (let i = 0; i < musicalNoteCount; i++) {
+      const note = document.createElement('div');
+      note.className = 'musical-note';
+      note.textContent = ['♪', '♫'][Math.floor(Math.random() * 2)];
+      note.style.left = Math.random() * 100 + 'vw';
+      note.style.animationDuration = Math.random() * 3 + 2 + 's';
+      note.style.fontSize = Math.random() * 10 + 10 + 'px';
+      document.body.appendChild(note);
+    }
+  </script>
+</body>
+</html>
